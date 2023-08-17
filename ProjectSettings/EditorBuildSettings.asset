@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartGame.unity
+    guid: 262b2a25f1e07e542876a62dfbf05157
+  - enabled: 1
+    path: Assets/Scenes/ButtonIntro.unity
+    guid: 42b73aecff1708448a25fa9f4ef7f836
+  - enabled: 1
+    path: Assets/Scenes/FenceLevel1.unity
+    guid: 1aaf8fdd34b0491469e05409720a70a1
+  - enabled: 1
+    path: Assets/Scenes/FenceLevel2.unity
+    guid: 376d5b200c5e7d848a6ef1e0c18ee32c
+  - enabled: 1
+    path: Assets/Scenes/LazerIntro.unity
+    guid: f73b1eba91ab21544a6fe1ecf5e11d4d
+  - enabled: 1
+    path: Assets/Scenes/LazerLevel2.unity
+    guid: c044eee80daeef2439cf5cbb14e12a4e
+  - enabled: 1
+    path: Assets/Scenes/LazerLevel3.unity
+    guid: f5c379624eaed9248a6014ed8e1272ab
+  - enabled: 1
+    path: Assets/Scenes/FLCombo1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/FLHCombo1.unity
+    guid: e80b72d629e46124a81f73624811be9f
+  - enabled: 1
+    path: Assets/Scenes/FLHCombo2.unity
+    guid: f9e7dc973dc8cac479f572235b74aba9
+  m_configObjects: {}
