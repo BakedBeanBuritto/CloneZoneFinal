@@ -10,6 +10,8 @@ TagManager:
   - LazerClone
   - Lazer
   - Fence
+  - PinkBox
+  - Pink
   layers:
   - Default
   - TransparentFX

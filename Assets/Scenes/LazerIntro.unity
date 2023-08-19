@@ -553,7 +553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bbf0f57169f931489e15f1e688ff6ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 15
+  timeLimit: 30
   restartDelay: 2
   timerText: {fileID: 609124897}
   messageText: {fileID: 839024781}
@@ -1427,6 +1427,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2035400721, guid: 0b60a5ac2ef1097499007f22e206faa8, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5070107445955534109, guid: 0b60a5ac2ef1097499007f22e206faa8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -464
@@ -2346,6 +2350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be7bfde9a436b4b48950eb52eaf9e392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  YouWinDisplay: {fileID: 0}
 --- !u!1 &1647678122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2487,14 +2492,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveManager: {fileID: 847010976}
-  FenceClone: {fileID: 18019364}
-  LazerClone: {fileID: 832244721}
-  PlayerIndicator: {fileID: 1535839735}
-  FenceCloneIndiator: {fileID: 200428323}
-  LazerCloneIndicator: {fileID: 28734130}
-  PlayerActive: 1
-  FenceCloneActive: 0
-  LazerCloneActive: 0
+  CloneMovements: []
+  CloneIndicators: []
 --- !u!4 &1694685356
 Transform:
   m_ObjectHideFlags: 0

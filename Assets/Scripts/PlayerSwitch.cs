@@ -5,83 +5,38 @@ using UnityEngine;
 public class PlayerSwitch : MonoBehaviour
 {
     public PlayerMovement MoveManager;
-    public FenceCloneMovement FenceClone;
-    public LazerCloneMovement LazerClone;
+    public List<MonoBehaviour> CloneMovements = new List<MonoBehaviour>();
+    public List<GameObject> CloneIndicators = new List<GameObject>();
 
-    public GameObject PlayerIndicator;
-    public GameObject FenceCloneIndiator;
-    public GameObject LazerCloneIndicator;
-
-    public bool PlayerActive = true;
-    public bool FenceCloneActive = false;
-    public bool LazerCloneActive = false;
+    private int activeCloneIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (CloneMovements.Count > 0)
+        {
+            CloneMovements[activeCloneIndex].enabled = true;
+            CloneIndicators[activeCloneIndex].gameObject.SetActive(true);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void SwitchToFenceClone()
-    {
-        FenceCloneActive = true;
-
-        if (FenceCloneActive==true)
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
         {
-            MoveManager.enabled = false;
-            LazerClone.enabled = false;
-            FenceClone.enabled = true;
-
-            PlayerActive = false;
-            LazerCloneActive = false;
-
-            FenceCloneIndiator.gameObject.SetActive(true);
-            LazerCloneIndicator.gameObject.SetActive(false);
-            PlayerIndicator.gameObject.SetActive(false);
+            SwitchToNextClone();
         }
     }
 
-    public void SwitchToLazerClone()
+    private void SwitchToNextClone()
     {
-        LazerCloneActive = true;
+        CloneMovements[activeCloneIndex].enabled = false;
+        CloneIndicators[activeCloneIndex].gameObject.SetActive(false);
 
-        if (LazerCloneActive == true)
-        {
-            MoveManager.enabled = false;
-            LazerClone.enabled = true;
-            FenceClone.enabled = false;
+        activeCloneIndex = (activeCloneIndex + 1) % CloneMovements.Count;
 
-            PlayerActive = false;
-            FenceCloneActive = false;
-
-            LazerCloneIndicator.gameObject.SetActive(true);
-            FenceCloneIndiator.gameObject.SetActive(false);
-            PlayerIndicator.gameObject.SetActive(false);
-        }
-    }
-
-    public void SwitchToPlayer()
-    {
-        PlayerActive = true;
-
-        if (PlayerActive == true)
-        {
-            MoveManager.enabled = true;
-            LazerClone.enabled = false;
-            FenceClone.enabled = false;
-
-            FenceCloneActive = false;
-            LazerCloneActive = false;
-
-            PlayerIndicator.gameObject.SetActive(true);
-            LazerCloneIndicator.gameObject.SetActive(false);
-            FenceCloneIndiator.gameObject.SetActive(false);
-        }
+        CloneMovements[activeCloneIndex].enabled = true;
+        CloneIndicators[activeCloneIndex].gameObject.SetActive(true);
     }
 }

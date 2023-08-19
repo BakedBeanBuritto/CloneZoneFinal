@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour
 {
-    //public GameObject YouWinDisplay;
+    
+    public GameObject YouWinDisplay;
 
     // Start is called before the first frame update
     void Start()
